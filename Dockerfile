@@ -20,7 +20,11 @@ RUN set -x \
     && yum -y install iproute \
     && yum -y install openssh-server \
     && chmod 755 /bin/init_container.sh \
-    && echo "root:Docker!" | chpasswd
+    && echo "root:Docker!" | chpasswd \
+    && yum -y install less \
+    && yum -y install curl \
+    && yum -y install wget \
+    && yum -y install tcptraceroute
     
 EXPOSE 2222 80
 
